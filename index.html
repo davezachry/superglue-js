@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>SuperGlue.js - A handy little jQuery plug-in giving you the ability to "glue down" an element relative to another element's position.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="SuperGlue.js - A handy little jQuery plug-in giving you the ability to 'glue down' an element relative to another element's position.">
+	<meta name="keywords" content="jquery, css, position, absolute, fixed, layout, design, html, markeup, superglue, plug-in, superglue.js">
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/primer.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<!-- GA -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-552388-3']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</head>
+<body>
+	<img src="assets/img/superglue.js-bottle.png" alt="SuperGlue.js Bottle" id="superglue-js-bottle">
+	<div class="header">
+		<div class="header-inner">
+			<h1>SuperGlue.js</h1>
+			<h2>Because everybody needs an element to stay put now and again.</h2>
+		</div>
+	</div>
+	<div class="content">
+		<h3>SuperGlue.js is a handy little jQuery plug-in giving you the ability to "glue down" an element relative to another element's position.</h3>
+		<a href="assets/files/superglue-js.zip" class="btn-download" target="_blank" onClick="_gaq.push(['_trackEvent', 'Downloads', 'SuperGlueJS', 'Primary']);"><strong>Download Now</strong><br>(Includes sample page)</a>
+		<hr>
+		<h4>Quick Start</h4>
+		<ol>
+			<li>Grab the latest version of <a href="http://jquery.com/" target="_blank">jQuery</a> and <a href="assets/files/superglue-js.zip" target="_blank"  onClick="_gaq.push(['_trackEvent', 'Downloads', 'SuperGlueJS', 'Secondary']);">SuperGlue.js</a>.</li>
+			<li>Include both scripts just above the close of the closing body tag.</li>
+			<li>Add the elements you want to "glue down" first on the page with style of <em>display: "none"</em>.</li>
+			<li>Call SuperGlue.js on the element you want to position, passing in the "parent" element.</li>
+		</ol>
+		<h4>Sample Code</h4>
+<pre><code>&lt;!-- ELEMENTS --&gt;
+&lt;div id=&quot;child-element&quot;&gt;&lt;/div&gt;
+........................
+... Page HTML Markup ...
+........................
+&lt;!-- SCRIPTS --&gt;
+&lt;script src="js/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.superglue.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(&apos;#child-element&apos;).superglue($(&apos;#parent-element&apos;));
+&lt;/script&gt;</code></pre>
+		<h4>See Sample Page</h4>
+		<p>Check out the sample page to see SuperGlue.js in action!</p>
+		<p><a href="sample.html" target="_blank">View the sample page now.</a></p>
+		<h4>Parameters</h4>
+		<p>SuperGlue.js accecpts two paramenters, <em>parent</em> and <em>options</em>.</p>
+		<p>superglue(parent, {options});</p>
+		<ul>
+			<li><strong>parent</strong> (required) - The object refernce for the parent element to base positioning.</li>
+			<li><strong>options</strong> (optional)
+				<ul>
+					<li><strong>topOffset</strong> (default: 0) - The number of pixels to offset from the starting Y point. Positive numbers move down and negative numbers move up.</li>
+				    <li><strong>leftOffset</strong> (default: 0) - The number of pixels to offset from the starting X point. Positive numbers move right and negative numbers move left.</li>
+					<li><strong>startingPoint</strong> (default: 'topleft') - The starting point relative to the parent element. Possible values include:
+						<ul>
+							<li>'topleft'</li>
+							<li>'topright'</li>
+							<li>'bottomleft'</li>
+							<li>'bottomright'</li>
+						</ul>
+					</li>
+					<li><strong>positionType</strong> (default: 'absolute') - Position type designation. Possible values include:
+						<ul>
+							<li>'absolute'</li>
+							<li>'relative'</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h4>Things to Note and Gotchas</h4>
+		<ul>
+			<li>Works with or without 'box-sizing: border-box'.</li>
+			<li>Using 'bottomleft' or 'bottomright' with a position of 'fixed' on elements where the height of the parent element pushes below the viewable screen do not work.</li>
+			<li>To make it fluid-responsive, feel free to add the element call to a $(window).on('resize').</li>
+			<li>Not built for IE 6.</li>
+		</ul>
+	</div>
+	<div class="info">
+		<div class="info-inner">
+			<h4>Permissions and What Not</h4>
+			<p>SuperGlue.js is licensed under the <a href="http://choosealicense.com/licenses/mit/" target="_blank">MIT License</a>.</p>
+			<h4>Who's Behind SuperGlue.js</h4>
+			<p>SuperGlue.js was developed by me (<a href="http://davidzachry.com" target="_blank">David Zachry</a>), a designer/developer living and working in Memphis, TN.</p>
+			<p>You can find me on Twitter at <a href="https://twitter.com/davezachry" target="_blank">@davezachry</a></p>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-inner">&copy;2013 <a href="http://davidzachry.com">David Zachry</a> - SuperGlue.js</div>
+	</div>
+	<!-- CLIPS -->
+	<!-- SCRIPTS -->
+	<script src="assets/js/jquery-1.10.2.min.js"></script>
+	<script src="assets/js/jquery.superglue.min.js"></script>
+	<script>
+	$('#superglue-js-bottle').superglue($('.header-inner'), {
+		topOffset: -60,
+		leftOffset: -150,
+		positionType: 'fixed'
+	});
+	$(window).on('resize.SuperGlue', function () {
+		if ($(window).width() < 1200) {
+			$('#superglue-js-bottle').hide();
+		} else {
+			$('#superglue-js-bottle').superglue($('.header-inner'), {
+				topOffset: -60,
+				leftOffset: -150,
+				positionType: 'fixed'
+			});
+		}
+	});
+	</script>
+</body>
+</html>

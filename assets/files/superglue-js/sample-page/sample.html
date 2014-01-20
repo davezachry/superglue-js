@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>SuperGlue.js</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- CSS -->
+	<link rel="stylesheet" href="sample-styles.css">
+</head>
+<body>
+	<!-- ELEMENTS -->
+	<div id="graphicone" class="graphic">Child One</div>
+	<div id="graphictwo" class="graphic">Child Two</div>	
+	<div id="graphicthree" class="graphic">Child Three</div>
+	<div id="graphicfour" class="graphic">Child Four</div>
+	<div id="graphicfive" class="graphic">Child Five</div>
+	<h3 id="textone">Text Element</h3>
+	<!-- SITE -->
+	<div class="header">
+		<h1>SuperGlue.js — Sample</h1>
+	</div>
+	<div class="content">
+		<div id="maingraphic">Parent Element</div>
+	</div>
+	<div class="footer">&copy;2013 Superglue.js</div>
+	<!-- SCRIPTS -->
+	<script src="jquery-1.10.2.min.js"></script>
+	<script src="jquery.superglue.min.js"></script>
+	<script>
+	$('#textone').superglue($('#maingraphic'), {
+		topOffset: -40,
+		leftOffset: 100,
+		startingPoint: 'topleft',
+		positionType: 'absolute'
+	});
+	$('#graphicone').superglue($('#maingraphic'), {
+		topOffset: -100,
+		leftOffset: -100,
+		startingPoint: 'topleft',
+		positionType: 'absolute'
+	});
+	$('#graphictwo').superglue($('#maingraphic'), {
+		topOffset: -100,
+		leftOffset: 0,
+		startingPoint: 'topright',
+		positionType: 'absolute'
+	});
+	$('#graphicthree').superglue($('#maingraphic'), {
+		topOffset: 0,
+		leftOffset: -100,
+		startingPoint: 'bottomleft',
+		positionType: 'absolute'
+	});
+	$('#graphicfour').superglue($('#maingraphic'), {
+		topOffset: 0,
+		leftOffset: 0,
+		startingPoint: 'bottomright',
+		positionType: 'absolute'
+	});
+	$('#graphicfive').superglue($('.content'), {
+		topOffset: 0,
+		leftOffset: -200,
+		startingPoint: 'topleft',
+		positionType: 'fixed'
+	});
+	$(window).on('resize.SuperGlue', function () {
+		$('#textone').superglue($('#maingraphic'), {
+			topOffset: -40,
+			leftOffset: 100,
+			startingPoint: 'topleft',
+			positionType: 'absolute'
+		});
+		$('#graphicone').superglue($('#maingraphic'), {
+			topOffset: -100,
+			leftOffset: -100,
+			startingPoint: 'topleft',
+			positionType: 'absolute'
+		});
+		$('#graphictwo').superglue($('#maingraphic'), {
+			topOffset: -100,
+			leftOffset: 0,
+			startingPoint: 'topright',
+			positionType: 'absolute'
+		});
+		$('#graphicthree').superglue($('#maingraphic'), {
+			topOffset: 0,
+			leftOffset: -100,
+			startingPoint: 'bottomleft',
+			positionType: 'absolute'
+		});
+		$('#graphicfour').superglue($('#maingraphic'), {
+			topOffset: 0,
+			leftOffset: 0,
+			startingPoint: 'bottomright',
+			positionType: 'absolute'
+		});
+		$('#graphicfive').superglue($('.content'), {
+			topOffset: 0,
+			leftOffset: -200,
+			startingPoint: 'topleft',
+			positionType: 'fixed'
+		});
+	});
+	</script>
+</body>
+</html>
